@@ -41,11 +41,11 @@ void getTable(record x[], int n) {
 		tableType=1;
 	}
 	else {
-		cout << "  -----------------------------\n";
-		cout << "  |    |            |         |\n";
-		cout << "  |  N |  Producer  |  Count  |\n";
-		cout << "  |    |            |         |\n";
-		cout << "  -----------------------------\n";
+		cout << "  -----------------------------\n"
+		"  |    |            |         |\n"
+		"  |  N |  Producer  |  Count  |\n"
+		"  |    |            |         |\n"
+		"  -----------------------------\n";
 		for(int i = 0; i<n; i++){
 			cout << "  | " << setw(2) << (i + 1) << " | " << setw(10) << x[i].test.model << " | " << setw(7) << x[i].test.count << " |\n";
 		}
