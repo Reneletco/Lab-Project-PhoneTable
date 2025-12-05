@@ -1,0 +1,26 @@
+  --------------------------------------------------------------------------------------------
+  |    |                                |                |        Мобильный телефон          |
+  |  N |            ФИО                 |   Номер тел.   |-----------------------------------|
+  |    |                                |                |  Произв.   |  Процессор   |  ОЗУ  |
+  --------------------------------------------------------------------------------------------
+  |  1 |                    Ivanov I.I. |   +79173014567 |     Xiaomi |   Snapdragon | 12288 |
+  |  2 |                    Ivanov I.I. |   +79176234890 |      Apple |        Apple | 24576 |
+  |  3 |                    Ivanov I.I. |   +79177890123 |    Samsung |       Exynos | 16384 |
+  |  4 |                    Ivanov I.I. |   +79174561234 |     Xiaomi |     MediaTek |  8192 |
+  |  5 |                    Ivanov I.I. |   +79179984521 |      Honor |        Kirin |  4096 |
+  |  6 |                    Morozov M.M |   +79173458902 |      Apple |        Apple | 32768 |
+  |  7 |                    Volkov V.V. |   +79171230987 |    Samsung |   Snapdragon | 16384 |
+  |  8 |                    Karpov D.A. |   +79176543218 |       Poco |     MediaTek |  6144 |
+  |  9 |                     Zaicev V.D |   +79177612389 |     Xiaomi |   Snapdragon | 20480 |
+  | 10 |                   Borisov B.R. |   +79174321856 |    Samsung |       Exynos |  8192 |
+  | 11 |                   Lebedev L.P. |   +79176099871 |      Apple |        Apple | 32784 |
+  | 12 |                  Nikolaev N.G. |   +79175550123 |     Xiaomi |     MediaTek | 12288 |
+  | 13 |                   Sokolov S.K. |   +79178341209 |    Samsung |   Snapdragon | 24576 |
+  | 14 |                    Frolov F.A. |   +79177123456 |      Honor |        Kirin |  4096 |
+  | 15 |                     Belov B.C. |   +79174789012 |      Apple |        Apple | 16384 |
+  | 16 |                  Maksimov B.C. |   +79177990145 |     Xiaomi |   Snapdragon | 20480 |
+  | 17 |                    Popov. P.V. |   +79176321458 |    Samsung |       Exynos |  8192 |
+  | 18 |                     Orlov O.D. |   +79175892031 |       Poco |     MediaTek |  6144 |
+  | 19 |                    Gromov G.K. |   +79178881234 |      Apple |        Apple | 32768 |
+  | 20 |                     Demin D.R. |   +79174678901 |     Xiaomi |   Snapdragon | 16384 |
+  --------------------------------------------------------------------------------------------
