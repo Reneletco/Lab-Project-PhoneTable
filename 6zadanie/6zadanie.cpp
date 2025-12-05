@@ -144,6 +144,7 @@ void deleteRecord(record x[], int &n) { // 4 пункт
 	cout<<"Вы уверены что хотите удалить эту запись? Y - да | N - нет"<<endl;
 	char input;
 	cin >> input;
+	i=i+1;
 	if (input == 'Y') {
 		if (i == n) {
 			n--;
@@ -216,6 +217,13 @@ void sortByAlphabetB(record x[], int n, record y[], int& k) { // 6 пункт
 	}
 	for (int i = 0; i < n - 1; i++) {
 		for (int j = 0; j < n - 1; j++) {
+			if (y[j].name == y[j + 1].name) {
+				if (y[j].phoneNumber > y[j + 1].phoneNumber) {
+					record temp = y[j];
+					y[j] = y[j + 1];
+					y[j + 1] = temp;
+				}
+			}
 			if (y[j].name > y[j + 1].name) {
 				record temp = y[j];
 				y[j] = y[j + 1];
@@ -270,6 +278,8 @@ void findByName(record x[], int n, record y[], int &k) { // 10 пункт
 }
 int main() {
 	setlocale(LC_ALL, "");
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
 	record a[N], b[N];
 	int ma=0,mb=0,choose;
 	while (true) {
@@ -286,7 +296,7 @@ int main() {
 		cout<< "9. Список производителей"<<endl;
 		cout<< "10. Найти по ФИО"<<endl;
 		cout<< "11. Вывести найденные данные"<<endl;
-		cout<<"12. Сохранить найденные данные"<<endl;
+		cout<< "12. Сохранить найденные данные"<<endl;
 		cout<< "0. Выйти"<<endl;
 		cin>>choose;
 		switch (choose) {
