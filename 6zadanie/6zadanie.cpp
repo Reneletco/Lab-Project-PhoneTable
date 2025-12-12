@@ -35,7 +35,7 @@ void getTable(record x[], int n, int c) {
 		"  |    |                                |                |  Произв.   |  Процессор   |  ОЗУ  |\n"
 			"  --------------------------------------------------------------------------------------------\n";
 		for (int i = 0; i < n; i++) {
-			cout << "  | " << setw(2) << i + 1 << " | " << setw(30) << x[i].name << " | " << setw(14) << x[i].phoneNumber << " | " << setw(10) << x[i].phone.phoneProducer << " | " << setw(12) << x[i].phone.proccessorProducer << " | " << setw(5) << x[i].phone.ram << " |" << endl;
+			cout << "  | "<<left << setw(2) << i + 1 <<left << " | " << setw(30) << x[i].name << left << " | " << setw(14) << x[i].phoneNumber << left << " | " << setw(10) << x[i].phone.phoneProducer << left << " | " << setw(12) << x[i].phone.proccessorProducer << left << " | " << setw(5) << x[i].phone.ram << left << " |" << endl;
 		}
 		cout << "  --------------------------------------------------------------------------------------------\n";
 	}
@@ -46,7 +46,7 @@ void getTable(record x[], int n, int c) {
 			"  |    |            |         |\n"
 			"  -----------------------------\n";
 		for(int i = 0; i<n; i++){
-			cout << "  | " << setw(2) << (i + 1) << " | " << setw(10) << x[i].test.model << " | " << setw(7) << x[i].test.count << " |\n";
+			cout << "  | "<<left << setw(2) << (i + 1)<<left << " | " << setw(10) << x[i].test.model<<left << " | " << setw(7) << x[i].test.count<<left << " |\n";
 		}
 		cout << "  -----------------------------\n";
 	}
@@ -91,7 +91,7 @@ void saveToFile(record x[], int& n) { // 2 пункт
 		"  |    |                                |                |  Произв.   |  Процессор   |  ОЗУ  |\n"
 		"  --------------------------------------------------------------------------------------------\n";
 		for (int i = 0; i < n; i++) {
-			out << "  | " << setw(2) << i + 1 << " | " << setw(30) << x[i].name << " | " << setw(14) << x[i].phoneNumber << " | " << setw(10) << x[i].phone.phoneProducer << " | " << setw(12) << x[i].phone.proccessorProducer << " | " << setw(5) << x[i].phone.ram << " |\n";
+			out << "  | " << left << setw(2) << i + 1 << left << " | " << setw(30) << x[i].name << left << " | " << setw(14) << x[i].phoneNumber << left << " | " << setw(10) << x[i].phone.phoneProducer << left << " | " << setw(12) << x[i].phone.proccessorProducer << left << " | " << setw(5) << x[i].phone.ram << left << " |\n";
 		}
 		out << "  --------------------------------------------------------------------------------------------\n";
 		tableType = 1;
@@ -103,7 +103,7 @@ void saveToFile(record x[], int& n) { // 2 пункт
 			"  |    |            |         |\n"
 			"  -----------------------------\n";
 		for (int i = 0; i < n; i++) {
-			out << "  | " << setw(2) << (i + 1) << " | " << setw(10) << x[i].test.model << " | " << setw(7) << x[i].test.count << " |\n";
+			out << "  | "<<left << setw(2) << (i + 1)<<left << " | " << setw(10) << x[i].test.model<<left << " | " << setw(7) << x[i].test.count<<left << " |\n";
 		}
 		out << "  -----------------------------\n";
 	}
@@ -160,16 +160,12 @@ void deleteRecord(record x[], int &n) { // 4 пункт
 	}
 }
 void printTable(record x[], int n,int c){ // 5 пункт
-	getTable(x,n,c);
+	getTable(x,n,c); 
 	cout<<"\n Нажмите кнопку чтобы продолжить"<<endl;
 	_getch();
 }
-void sortByNumber(record x[], int n, record y[], int &k) { // 8 пункт
+void sortByNumber(record y[], int n) { // 8 пункт
 	tableType=0;
-	k = n;
-	for (int i = 0; i < n; i++) {
-		y[i]=x[i];
-	}
 	for (int i = 0; i < n-1; i++) {
 		for (int j = 0; j < n-1; j++) {
 			if (y[j].phone.ram > y[j + 1].phone.ram) {
@@ -183,12 +179,8 @@ void sortByNumber(record x[], int n, record y[], int &k) { // 8 пункт
 	cout<<"Нажмите кнопку чтобы продолжить"<<endl;
 	_getch();
 }
-void sortByAlphabet(record x[], int n, record y[], int &k) { // 7 пункт
+void sortByAlphabet(record y[], int n) { // 7 пункт
 	tableType = 0;
-	k = n;
-	for (int i = 0; i < n; i++) {
-		y[i] = x[i];
-	}
 	for (int i = 0; i < n - 1; i++) {
 		for (int j = 0; j < n - 1; j++) {
 			if (y[j].phone.phoneProducer == y[j + 1].phone.phoneProducer) {
@@ -209,12 +201,8 @@ void sortByAlphabet(record x[], int n, record y[], int &k) { // 7 пункт
 	cout << "Нажмите кнопку чтобы продолжить" << endl;
 	_getch();
 }
-void sortByAlphabetB(record x[], int n, record y[], int& k) { // 6 пункт
+void sortByAlphabetB(record y[],int n) { // 6 пункт
 	tableType = 0;
-	k = n;
-	for (int i = 0; i < n; i++) {
-		y[i] = x[i];
-	}
 	for (int i = 0; i < n - 1; i++) {
 		for (int j = 0; j < n - 1; j++) {
 			if (y[j].name == y[j + 1].name) {
@@ -310,11 +298,11 @@ int main() {
 				break;
 			case 5: printTable(a, ma,0);
 				break;
-			case 6: sortByAlphabetB(a,ma,b,mb);
+			case 6: sortByAlphabetB(a,ma);
 				break;
-			case 7: sortByAlphabet(a,ma,b,mb);
+			case 7: sortByAlphabet(a,ma);
 				break;
-			case 8: sortByNumber(a, ma,b,mb);
+			case 8: sortByNumber(a, ma);
 				break;
 			case 9: getProducers(a, ma, b, mb);
 				break;
